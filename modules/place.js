@@ -1,4 +1,4 @@
 import ajax from "./ajax.js";
 import { google_api_key, corsFix } from "../config.js"
 
-export let google = ajax(corsFix + `AIzaSyDalbPmW4QbIZb913EPmkGud6TsA6QsUjk=${google_api_key}`,)
+export let google = ajax(corsFix + `https://maps.googleapis.com/maps/api/place/textsearch/json?query=123+main+street&key==${google_api_key}`)
