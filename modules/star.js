@@ -1,13 +1,30 @@
 
-let rating = Math.round(3.7)
-console.log(rating)
+let starRating = Math.round(3.7) //insert parsed data from stars attribute here
+console.log(starRating)
+
+
 
 //atttribute "stars" from JSON data
-
-
-// const makeStar = (star) => {
-//     let card = document.createElement("div")
+//need to add to css: 
+// .checked {
+//   color: orange;
 // }
+
+const makeStar = (star) => {
+    let starChecked = document.createElement("span")
+    card.append(starChecked)
+    starChecked.className = "fa fa-star checked"
+    
+    let starNotChecked = document.createElement("span")
+    card.append(starNotChecked)
+    starNotChecked.className = "fa fa-star"
+
+    i=0;
+    while(i<starRating){
+        card.append(starChecked);
+        i++
+    }
+}
 
 
 
