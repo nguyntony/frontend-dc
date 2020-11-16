@@ -48,12 +48,28 @@ export const makeCard = (trails) => {
         // trail difficulty
         let difficulty = document.createElement("p")
         card.append(difficulty)
-        difficulty.innerText = "Difficulty"
+        difficulty.innerText = "Difficulty  "
 
         let color = document.createElement("span")
         difficulty.append(color)
-        color.setAttribute("style", `background-color: ${trail.difficulty}`)
+        color.style.display = "inline-block"
+        color.style.backgroundColor = trail.difficulty;
+        color.style.width = "10px"
+        color.style.height = "10px"
+        color.style.borderRadius = "50%"
 
+
+        // visit website button
+        let trailUrl = document.createElement("a")
+        trailUrl.href = trail.url
+        trailUrl.innerText = "Visit Website"
+
+        let button = document.createElement("button")
+        button.append(trailUrl)
+        card.append(button)
+
+
+        // adding the card to the dom
         body.append(card)
     })
 }
