@@ -6,8 +6,18 @@ export const makeCard = (trails) => {
     const body = document.querySelector("body");
     const cardHolder = document.querySelector(".card-holder")
 
+    if (parsedTrails["trails"].length == 0) {
+        let noResults = document.createElement("div")
+        noResults.className = "no-results"
+        noResults.innerText = "No results found for this area."
+        cardHolder.append(noResults)
+        console.log(parsedTrails["trails"].length)
+    }
+
     parsedTrails.trails.forEach((trail) => {
         console.log(trail)
+
+
         let card = document.createElement("div")
         card.className = "card"
 
