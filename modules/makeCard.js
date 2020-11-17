@@ -65,6 +65,7 @@ export const makeCard = (trails) => {
         let pSummary = document.createElement("p")
         card.append(pSummary)
         pSummary.innerText = trail.summary;
+        pSummary.className = "summary"
 
 
         // visit website button
