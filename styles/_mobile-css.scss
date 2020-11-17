@@ -12,6 +12,7 @@
         top: 0;
         height: 105vh;
         overflow: scroll;
+        width: 100vw;
     
         .card {
             color: white;
@@ -136,3 +137,6 @@ header {
     }
 }
 
+.hidden {
+    display: none;
+}

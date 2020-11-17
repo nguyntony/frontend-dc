@@ -29,6 +29,7 @@ html {
   top: 0;
   height: 105vh;
   overflow: scroll;
+  width: 100vw;
 }
 
 .main-content .card-holder .card {
@@ -173,5 +174,9 @@ header h1 {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */
