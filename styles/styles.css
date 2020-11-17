@@ -52,6 +52,10 @@ html {
   color: #c04d33;
 }
 
+.main-content .card-holder .card .summary {
+  margin-top: 2rem;
+}
+
 .main-content .card-holder .card button {
   margin-top: 3rem;
   padding: 10px 15px;
