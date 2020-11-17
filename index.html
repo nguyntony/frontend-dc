@@ -7,14 +7,32 @@
     <title>Document</title>
     <link href="./styles/styles.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&family=Raleway:wght@600;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <div class="main-content">
+        <header>
+            <h1>Go hike</h1>
+        </header>
+        <section class="form-container">
+            <form id="form">
+                <input type="text" class="user-location" placeholder="City, State or Zip Code">
+                <button type="submit" class="user-search">Search</button>
+            </form>
+            <div class="card-holder"></div>
+        </section>
+        <section class="bckimg-container">
+            <div class="background-img"><img src="./styles/images/mobile_pic.JPG" alt=""></div>
+        </section>
+    </div>
 
-    <form id="form">
-        <input type="text" class="user-location" placeholder="City, State or Zip Code">
-        <button type="submit" class="user-search">Search</button>
-    </form>
+
+
     <script src="main.js" type="module"></script>
 </body>
 

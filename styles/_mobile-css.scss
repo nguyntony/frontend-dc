@@ -1,0 +1,41 @@
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 20vh 1fr;
+    
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    
+    h1 {
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        font-size: 9.3rem;
+    }
+}
+
+.form-container {
+    display: flex;
+    // align-content: ;
+}
+
+.card-holder {
+    z-index: 1;
+}
+
+
+.bckimg-container {
+    position: relative;
+    
+    .background-img{
+        width: 100vw;
+        position: fixed;
+
+        img {
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+}
