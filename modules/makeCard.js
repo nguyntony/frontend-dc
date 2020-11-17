@@ -16,9 +16,9 @@ export const makeCard = (trails) => {
         h3.innerText = trail.name;
 
         //star rating
-        let starRating = Math.round(trail.stars)     //Math.round(insert stars rating from parsed data here) 
+        let starRating = Math.round(trail.stars)
 
-        for(let i=0; i < starRating; i++){
+        for (let i = 0; i < starRating; i++) {
             let starChecked = document.createElement("span")
             starChecked.className = "fa fa-star checked"
             card.append(starChecked);
@@ -36,12 +36,17 @@ export const makeCard = (trails) => {
         difficulty.innerText = "Difficulty  "
 
         let color = document.createElement("span")
+        let img = document.createElement("img")
+        img.src = `../styles/images/${trail.difficulty}.PNG`
+        img.style.width = "15px"
+        color.append(img)
         difficulty.append(color)
-        color.style.display = "inline-block"
-        color.style.backgroundColor = trail.difficulty;
-        color.style.width = "10px"
-        color.style.height = "10px"
-        color.style.borderRadius = "50%"
+
+        // color.style.display = "inline-block"
+        // color.style.backgroundColor = trail.difficulty;
+        // color.style.width = "10px"
+        // color.style.height = "10px"
+        // color.style.borderRadius = "50%"
 
         // trail summary
         let pSummary = document.createElement("p")
