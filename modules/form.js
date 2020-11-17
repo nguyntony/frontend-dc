@@ -1,9 +1,10 @@
 import ajax from "./ajax.js"
-import {corsFix, hiking_api_key, google_api_key} from "../config.js"
+import { corsFix, hiking_api_key, google_api_key } from "../config.js"
 export const userSearchButton = document.querySelector(".user-search")
 import { makeCard } from "./makeCard.js"
 
-export const userInput = (evt) => {    let form = document.querySelector("#form")
+export const userInput = (evt) => {
+    let form = document.querySelector("#form")
     let location = document.querySelector(".user-location")
     let userLocation = location.value
     console.log(userLocation)
@@ -16,8 +17,8 @@ export const userInput = (evt) => {    let form = document.querySelector("#form"
         let userLat = parsedLocation.results[0].geometry.location.lat
         let userLng = parsedLocation.results[0].geometry.location.lng
         console.log(`${userLat}, ${userLng}`)
-    
-    ajax(corsFix + `https://www.hikingproject.com/data/get-trails?lat=${userLat}&lon=${userLng}&maxDistance=10&key=${hiking_api_key}`, makeCard)
+
+        ajax(corsFix + `https://www.hikingproject.com/data/get-trails?lat=${userLat}&lon=${userLng}&maxDistance=10&key=${hiking_api_key}`, makeCard)
     })
 }
 
