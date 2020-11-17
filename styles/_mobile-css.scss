@@ -1,37 +1,129 @@
+
 .main-content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 15vh 20vh 1fr;
+    grid-template-rows: 30vh 30vh 1fr;
+    position: relative;
+
+
+    .card-holder {
+        background-color: rgba(45, 45, 45, 0.9);
+        position: absolute;
+        top: 0;
+        height: 105vh;
+        overflow: scroll;
     
+        .card {
+            color: white;
+            background-color: rgb(33, 33, 33);
+            border-radius: 15px;
+            padding: 2rem 1rem;
+            margin: 4rem 2rem;
+            font-size: 1.7rem;
+            font-family: 'Noto Sans JP', sans-serif;
+            text-align: center;
+
+            
+
+            h3 {
+                color: #c02400;
+                letter-spacing: 1px;
+            }
+    
+            h4 {
+                margin-bottom: 2rem;
+                color: #c04d33;
+            }
+
+            button {
+                margin-top: 3rem;
+                padding: 10px 15px;
+                font-size: 1.7rem;
+                font-family: 'Roboto Condensed', sans-serif;
+                text-transform: uppercase;
+                background-color: #e66042;
+                border-radius: 20px;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }
 
 header {
+    grid-row: 1/2; 
     display: flex;
     justify-content: center;
+    align-items: center;
     
     h1 {
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 700;
         text-transform: uppercase;
-        font-size: 9.3rem;
+        font-size: 11rem;
+        transform: scale(1.05);
+        overflow: hidden;
     }
 }
 
 .form-container {
+    grid-row: 2/3;
     display: flex;
-    // align-content: ;
-}
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
 
-.card-holder {
-    z-index: 1;
-}
+    position: relative;
 
+    #form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .user-location {
+            background-image: url(./images/pin.png);
+            background-position: 10px 5px;
+            background-repeat: no-repeat;
+            background-size: 30px 30px;
+            padding: 12px 10px;
+            padding-left: 50px;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+
+        .user-search {
+            margin-top: 1rem;
+            font-size: 2rem;
+            padding: 5px;
+            background-color: #c02400;
+            color: rgb(255, 255, 255);
+            font-family: 'Roboto Condensed', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            width: 150px;
+            border-radius: 20px;
+        }
+
+        .user-search:focus {
+            outline: none;
+        }
+    }
+}
 
 .bckimg-container {
-    position: relative;
+    grid-row: 3/4;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
     
     .background-img{
         width: 100vw;
-        position: fixed;
+        
 
         img {
             object-fit: contain;
@@ -39,3 +131,4 @@ header {
         }
     }
 }
+
