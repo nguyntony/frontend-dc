@@ -4,6 +4,7 @@ export const makeCard = (trails) => {
     console.log(parsedTrails)
 
     const body = document.querySelector("body");
+    const cardHolder = document.querySelector(".card-holder")
 
     parsedTrails.trails.forEach((trail) => {
         console.log(trail)
@@ -17,7 +18,7 @@ export const makeCard = (trails) => {
         h3.innerText = trail.name;
 
 
-        //
+        // location
         let h4 = document.createElement("h4")
         card.append(h4)
         h4.innerText = trail.location;
@@ -66,6 +67,6 @@ export const makeCard = (trails) => {
 
 
         // adding the card to the dom
-        body.append(card)
+        cardHolder.append(card)
     })
 }

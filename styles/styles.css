@@ -1,4 +1,64 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .checked {
   color: orange;
+}
+
+.main-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 15vh 20vh 1fr;
+      grid-template-rows: 15vh 20vh 1fr;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header h1 {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 9.3rem;
+}
+
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-holder {
+  z-index: 1;
+}
+
+.bckimg-container {
+  position: relative;
+}
+
+.bckimg-container .background-img {
+  width: 100vw;
+  position: fixed;
+}
+
+.bckimg-container .background-img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
