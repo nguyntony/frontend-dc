@@ -20,8 +20,7 @@ export const userInput = (evt) => {
         let userLng = parsedLocation.results[0].geometry.location.lng
         console.log(`${userLat}, ${userLng}`)
 
-        ajax(hikingUrl + `&lat=${userLat}&lon=${userLng}&maxDistance=10&maxResults=5`, makeCard)
-
+        ajax(hikingUrl + `&lat=${userLat}&lon=${userLng}&maxResults=5`, makeCard)
     })
 }
 
