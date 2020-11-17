@@ -2,8 +2,10 @@ import ajax from "./ajax.js"
 import { corsFix, hiking_api_key, google_api_key, googleUrl, hikingUrl } from "../config.js"
 export const userSearchButton = document.querySelector(".user-search")
 import { makeCard } from "./makeCard.js"
+const cardHolderElement = document.querySelector('.card-holder');
 
 export const userInput = (evt) => {
+    cardHolderElement.innerHTML = '';
     let form = document.querySelector("#form")
     let location = document.querySelector(".user-location")
     let userLocation = location.value
