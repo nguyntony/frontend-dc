@@ -2,7 +2,7 @@ import ajax from "./ajax.js"
 import { corsFix, hiking_api_key, google_api_key, googleUrl, hikingUrl } from "../config.js"
 export const userSearchButton = document.querySelector(".user-search")
 import { makeCard } from "./makeCard.js"
-export const cardHolderElement = document.querySelector('.card-holder');
+export const cardHolderElement = document.querySelector('.cardholder');
 
 export const userInput = (evt) => {
     //cardHolderElement.innerHTML = '';
