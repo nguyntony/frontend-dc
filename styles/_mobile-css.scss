@@ -17,14 +17,18 @@
         height: 100vh;
         @media screen and (min-width: 600px) {
             width: 500px;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            height: 80vh;
+            border-radius: 15px;
+            box-shadow: 5px 10px 8px #555555;
         }
 
         .close {
             position: fixed;
-            right: 0;
-            padding: 1rem;
+            right: 10px;
+            padding: .3rem .8rem;
             font-size: 2rem;
             font-weight: bold;
         }
@@ -98,9 +102,37 @@ header {
         font-family: 'Roboto Condensed', sans-serif;
         font-weight: 700;
         text-transform: uppercase;
-        font-size: 11rem;
+        font-size: 15rem;
         transform: scale(1.06);
         overflow: hidden;
+
+        @media screen and (max-width: 550px) {
+            font-size: 11rem;
+        }
+
+        @media screen and (max-width: 420px) {
+            font-size: 11rem;
+            transform: scale(1.15);
+        }
+
+        @media screen and (max-width: 375px) {
+            font-size: 10rem;
+            transform: scale(1.15);
+        }
+
+        @media screen and (max-width: 370px) {
+            font-size: 10rem;
+            transform: scale(1.12);
+        }
+
+        @media screen and (max-width: 320px) {
+            font-size: 8.8rem;
+        }
+
+        @media screen and (max-width: 280px) {
+            font-size: 7.5rem;
+            transform: scale(1.15);
+        }
     }
 }
 
@@ -110,13 +142,22 @@ header {
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 2rem;
-
     position: relative;
+
+    @media screen and (min-width:600px) {
+        transform: translateY(25%);
+    }
 
     #form {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        .no-results {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
 
         .user-location {
             background-image: url(./images/pin.png);
@@ -155,6 +196,24 @@ header {
     bottom: 0;
     z-index: -1;
     overflow: hidden;
+    
+
+    @media screen and (min-width: 520px) {
+        height: 65vh;
+        top: 15.29vh;
+
+        #banner{
+            display: none;
+        }
+
+        background-image: url(./images/desktop_pic.JPG);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+
+    }
     
     .background-img{
         width: 100vw;

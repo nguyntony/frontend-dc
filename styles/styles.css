@@ -33,16 +33,21 @@ html {
 @media screen and (min-width: 600px) {
   .main-content .cardholder {
     width: 500px;
+    top: 50%;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    height: 80vh;
+    border-radius: 15px;
+    -webkit-box-shadow: 5px 10px 8px #555555;
+            box-shadow: 5px 10px 8px #555555;
   }
 }
 
 .main-content .cardholder .close {
   position: fixed;
-  right: 0;
-  padding: 1rem;
+  right: 10px;
+  padding: .3rem .8rem;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -118,10 +123,54 @@ header h1 {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 11rem;
+  font-size: 15rem;
   -webkit-transform: scale(1.06);
           transform: scale(1.06);
   overflow: hidden;
+}
+
+@media screen and (max-width: 550px) {
+  header h1 {
+    font-size: 11rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  header h1 {
+    font-size: 11rem;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header h1 {
+    font-size: 10rem;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+}
+
+@media screen and (max-width: 370px) {
+  header h1 {
+    font-size: 10rem;
+    -webkit-transform: scale(1.12);
+            transform: scale(1.12);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header h1 {
+    font-size: 8.8rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  header h1 {
+    font-size: 7.5rem;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
 }
 
 .form-container {
@@ -141,6 +190,13 @@ header h1 {
   position: relative;
 }
 
+@media screen and (min-width: 600px) {
+  .form-container {
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+  }
+}
+
 .form-container #form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,6 +208,12 @@ header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.form-container #form .no-results {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .form-container #form .user-location {
@@ -191,6 +253,21 @@ header h1 {
   bottom: 0;
   z-index: -1;
   overflow: hidden;
+}
+
+@media screen and (min-width: 520px) {
+  .bckimg-container {
+    height: 65vh;
+    top: 15.29vh;
+    background-image: url(./images/desktop_pic.JPG);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bckimg-container #banner {
+    display: none;
+  }
 }
 
 .bckimg-container .background-img {

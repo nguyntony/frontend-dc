@@ -1,11 +1,12 @@
 import ajax from "./ajax.js"
-import { corsFix, hiking_api_key, google_api_key, googleUrl, hikingUrl } from "../config.js"
-export const userSearchButton = document.querySelector(".user-search")
+import { googleUrl, hikingUrl } from "../config.js"
 import { makeCard } from "./makeCard.js"
+
+export const userSearchButton = document.querySelector(".user-search")
 export const cardHolderElement = document.querySelector('.cardholder');
 
 export const userInput = (evt) => {
-    //cardHolderElement.innerHTML = '';
+
     let form = document.querySelector("#form")
     let location = document.querySelector(".user-location")
     let userLocation = location.value
@@ -22,7 +23,7 @@ export const userInput = (evt) => {
 
         ajax(hikingUrl + `&lat=${userLat}&lon=${userLng}&maxResults=5`, makeCard)
     })
-    //cardHolderElement.classList.toggle("hidden")
+
 }
 
 userSearchButton.addEventListener("click", userInput)
