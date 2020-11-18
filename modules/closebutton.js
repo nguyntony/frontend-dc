@@ -1,10 +1,17 @@
-import {cardHolderElement} from "./form.js"
+import { cardHolderElement } from "./form.js"
 
 export const closeButton = document.querySelector(".close")
-export const closeInput = (evt) => {
-    const cards = document.querySelectorAll(".card")
+export const closeInput = () => {
+    let cardsInCardHolder = document.querySelectorAll(".card")
     //cardHolderElement.innerHTML = '';
-    cardHolderElement.remove(cards)
+    // console.log(cards)
+    // cardHolderElement.remove(cards)
+    // cardsInCardHolder.parentNode.removeChild(cardsInCardHolder)
+    // console.log(cardsInCardHolder)
+    cardsInCardHolder.forEach((card) => {
+        card.remove()
+    })
+
     cardHolderElement.classList.toggle("hidden")
 }
 closeButton.addEventListener("click", closeInput)

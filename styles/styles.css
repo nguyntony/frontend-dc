@@ -9,10 +9,6 @@ html {
           box-sizing: border-box;
 }
 
-.checked {
-  color: orange;
-}
-
 .main-content {
   display: -ms-grid;
   display: grid;
@@ -21,18 +17,20 @@ html {
   -ms-grid-rows: 30vh 30vh 1fr;
       grid-template-rows: 30vh 30vh 1fr;
   position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
-.main-content .card-holder {
+.main-content .cardholder {
   background-color: rgba(45, 45, 45, 0.9);
   position: absolute;
   top: 0;
-  height: 105vh;
   overflow: scroll;
   width: 100vw;
+  height: 100vh;
 }
 
-.main-content .card-holder .card {
+.main-content .cardholder .card {
   color: white;
   background-color: #212121;
   border-radius: 15px;
@@ -43,21 +41,32 @@ html {
   text-align: center;
 }
 
-.main-content .card-holder .card h3 {
+.main-content .cardholder .card h3 {
   color: #c02400;
   letter-spacing: 1px;
+  font-size: 2.5rem;
 }
 
-.main-content .card-holder .card h4 {
+.main-content .cardholder .card h4 {
   margin-bottom: 2rem;
   color: #c04d33;
 }
 
-.main-content .card-holder .card .summary {
+.main-content .cardholder .card .checked {
+  color: orange;
+}
+
+.main-content .cardholder .card .summary {
   margin-top: 2rem;
 }
 
-.main-content .card-holder .card button {
+.main-content .cardholder .card .difficulty span img {
+  position: relative;
+  top: 1px;
+  left: 8px;
+}
+
+.main-content .cardholder .card button {
   margin-top: 3rem;
   padding: 10px 15px;
   font-size: 1.7rem;
@@ -67,7 +76,7 @@ html {
   border-radius: 20px;
 }
 
-.main-content .card-holder .card button a {
+.main-content .cardholder .card button a {
   color: white;
   text-decoration: none;
 }
@@ -85,6 +94,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 header h1 {
@@ -92,8 +102,8 @@ header h1 {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 11rem;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
   overflow: hidden;
 }
 
@@ -168,6 +178,8 @@ header h1 {
 
 .bckimg-container .background-img {
   width: 100vw;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
 }
 
 .bckimg-container .background-img img {

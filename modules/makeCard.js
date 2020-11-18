@@ -4,7 +4,7 @@ export const makeCard = (trails) => {
     console.log(parsedTrails)
 
     const body = document.querySelector("body");
-    const cardHolder = document.querySelector(".card-holder")
+    const cardHolder = document.querySelector(".cardholder")
 
     if (parsedTrails["trails"].length == 0) {
         let noResults = document.createElement("div")
@@ -19,7 +19,7 @@ export const makeCard = (trails) => {
 
 
         let card = document.createElement("div")
-        card.className = "card"
+        card.classList.add("card")
 
 
         // name of trail
@@ -52,7 +52,8 @@ export const makeCard = (trails) => {
         // trail difficulty
         let difficulty = document.createElement("p")
         card.append(difficulty)
-        difficulty.innerText = "Difficulty  "
+        difficulty.className = "difficulty"
+        difficulty.innerText = "Difficulty"
         let color = document.createElement("span")
         let img = document.createElement("img")
         img.src = `../styles/images/${trail.difficulty}.PNG`
@@ -71,6 +72,7 @@ export const makeCard = (trails) => {
         // visit website button
         let trailUrl = document.createElement("a")
         trailUrl.href = trail.url
+        trailUrl.target = "_blank"
         trailUrl.innerText = "Visit Website"
         let button = document.createElement("button")
         button.append(trailUrl)

@@ -3,6 +3,7 @@ html {
     // this percent when converting to rem will equal to 10px
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +11,5 @@ html {
     // removes any default styling the browser may have
 }
 
-// color for stars
-.checked {
-    color: orange;
-}
 
 @import "mobile-css";
