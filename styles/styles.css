@@ -30,6 +30,14 @@ html {
   height: 100vh;
 }
 
+.main-content .cardholder .close {
+  position: fixed;
+  right: 0;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .main-content .cardholder .card {
   color: white;
   background-color: #212121;

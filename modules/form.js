@@ -22,7 +22,7 @@ export const userInput = (evt) => {
 
         ajax(hikingUrl + `&lat=${userLat}&lon=${userLng}&maxResults=5`, makeCard)
     })
-    cardHolderElement.classList.toggle("hidden")
+    //cardHolderElement.classList.toggle("hidden")
 }
 
 userSearchButton.addEventListener("click", userInput)

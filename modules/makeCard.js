@@ -5,14 +5,21 @@ export const makeCard = (trails) => {
 
     const body = document.querySelector("body");
     const cardHolder = document.querySelector(".cardholder")
-
+    const noResults = document.querySelector(".no-results")
     if (parsedTrails["trails"].length == 0) {
-        let noResults = document.createElement("div")
-        noResults.className = "no-results"
-        noResults.innerText = "No results found for this area."
-        cardHolder.append(noResults)
-        console.log(parsedTrails["trails"].length)
-    }
+    //     let noResults = document.createElement("div")
+    //     noResults.className = "no-results"
+    //     noResults.innerText = "No results found for this area."
+    //     cardHolder.append(noResults)
+    //     console.log(parsedTrails["trails"].length)
+           // const noResults = document.querySelector(".no-results")
+            noResults.innerText = "No results found for this area."
+        } else {
+            noResults.innerText = ""
+            cardHolder.classList.toggle("hidden")
+        }
+
+
 
     parsedTrails.trails.forEach((trail) => {
         console.log(trail)
