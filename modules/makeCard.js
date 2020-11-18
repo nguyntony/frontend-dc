@@ -3,28 +3,24 @@ export const makeCard = (trails) => {
     let parsedTrails = JSON.parse(trails)
     console.log(parsedTrails)
 
-    const body = document.querySelector("body");
+
     const cardHolder = document.querySelector(".cardholder")
     const noResults = document.querySelector(".no-results")
+
+
     if (parsedTrails["trails"].length == 0) {
-    //     let noResults = document.createElement("div")
-    //     noResults.className = "no-results"
-    //     noResults.innerText = "No results found for this area."
-    //     cardHolder.append(noResults)
-    //     console.log(parsedTrails["trails"].length)
-           // const noResults = document.querySelector(".no-results")
-            noResults.innerText = "No results found for this area."
-        } else {
-            noResults.innerText = ""
-            cardHolder.classList.toggle("hidden")
-        }
+        noResults.innerText = "No results found for this area."
+    } else {
+        noResults.innerText = ""
+        cardHolder.classList.toggle("hidden")
+    }
 
 
 
     parsedTrails.trails.forEach((trail) => {
         console.log(trail)
 
-
+        // creating each card
         let card = document.createElement("div")
         card.classList.add("card")
 
