@@ -1,4 +1,3 @@
-
 export const makeCard = (trails) => {
     let parsedTrails = JSON.parse(trails)
     console.log(parsedTrails)

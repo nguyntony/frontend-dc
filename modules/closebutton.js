@@ -1,4 +1,4 @@
-import { cardHolderElement } from "./form.js"
+import { cardHolderElement } from "../main.js"
 
 export const closeButton = document.querySelector(".close")
 export const closeInput = () => {
@@ -10,5 +10,5 @@ export const closeInput = () => {
 
     cardHolderElement.classList.toggle("hidden")
 }
-closeButton.addEventListener("click", closeInput)
+
 
