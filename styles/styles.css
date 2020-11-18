@@ -30,6 +30,15 @@ html {
   height: 100vh;
 }
 
+@media screen and (min-width: 600px) {
+  .main-content .cardholder {
+    width: 500px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
 .main-content .cardholder .close {
   position: fixed;
   right: 0;
@@ -47,11 +56,6 @@ html {
   font-size: 1.7rem;
   font-family: 'Noto Sans JP', sans-serif;
   text-align: center;
-  max-width: 350px;
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 .main-content .cardholder .card h3 {

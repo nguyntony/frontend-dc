@@ -12,14 +12,14 @@
         background-color: rgba(45, 45, 45, 0.9);
         position: absolute;
         top: 0;
-        // left: 50%;
-        // transform: translateX(-50%);
         overflow: scroll;
-        // width: 100vw;
         width: 100vw;
         height: 100vh;
-        // display: flex;
-        // justify-content: center;
+        @media screen and (min-width: 600px) {
+            width: 500px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
         .close {
             position: fixed;
@@ -38,10 +38,6 @@
             font-size: 1.7rem;
             font-family: 'Noto Sans JP', sans-serif;
             text-align: center;
-            max-width: 350px;
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%);
 
             
 
