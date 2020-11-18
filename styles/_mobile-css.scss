@@ -15,7 +15,11 @@
         overflow: scroll;
         width: 100vw;
         height: 100vh;
-    
+        @media screen and (min-width: 600px) {
+            width: 500px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
         .close {
             position: fixed;
