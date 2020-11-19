@@ -17,7 +17,7 @@ Beauty is everywhere! That is why we wish to connect people with their local tra
 ### APIs
 - - - -
 * [Google Places](https://developers.google.com/places/web-service/overview)
-* [Hiking Project](https://www.hikingproject.com/data). 
+* [Hiking Project](https://www.hikingproject.com/data)
 
 
 
