@@ -98,6 +98,7 @@ header {
     align-items: center;
     overflow: hidden;
     
+    
     h1 {
         font-family: 'Roboto Condensed', sans-serif;
         font-weight: 700;
@@ -105,6 +106,7 @@ header {
         font-size: 15rem;
         transform: scale(1.06);
         overflow: hidden;
+        
 
         @media screen and (max-width: 550px) {
             font-size: 11rem;
@@ -218,6 +220,18 @@ header {
     .background-img{
         width: 100vw;
         transform: translateY(5px);
+
+        @media screen and (max-height: 870px) {
+            transform: translateY(20%);
+        }
+
+        @media screen and (max-height: 626px) {
+            transform: translateY(45%);
+        }
+            
+        @media screen and (max-height: 400px) {
+            transform: translateY(55%);
+        }
         
 
         img {

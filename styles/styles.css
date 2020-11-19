@@ -276,6 +276,27 @@ header h1 {
           transform: translateY(5px);
 }
 
+@media screen and (max-height: 870px) {
+  .bckimg-container .background-img {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+}
+
+@media screen and (max-height: 626px) {
+  .bckimg-container .background-img {
+    -webkit-transform: translateY(45%);
+            transform: translateY(45%);
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .bckimg-container .background-img {
+    -webkit-transform: translateY(55%);
+            transform: translateY(55%);
+  }
+}
+
 .bckimg-container .background-img img {
   -o-object-fit: contain;
      object-fit: contain;
