@@ -96,11 +96,19 @@ html {
   text-transform: uppercase;
   background-color: #e66042;
   border-radius: 20px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .main-content .cardholder .card button a {
   color: white;
   text-decoration: none;
+}
+
+.main-content .cardholder .card button:hover {
+  background-color: #c02400;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 header {
@@ -239,10 +247,18 @@ header h1 {
   letter-spacing: 1.5px;
   width: 150px;
   border-radius: 20px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .form-container #form .user-search:focus {
   outline: none;
+}
+
+.form-container #form .user-search:hover {
+  background-color: #fa613f;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .bckimg-container {
